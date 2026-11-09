@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O_Smotri_Eto_Sanya — стримы, клипы, эмодзи</title>
+
+  <!-- Пиксельный шрифт с поддержкой кириллицы -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__scanlines"></div>
+    <h1 class="hero__title">O_Smotri_Eto_Sanya</h1>
+    <p class="hero__subtitle">Стримы · Клипы · Эмодзи · Telegram</p>
+    <div class="hero__glow"></div>
+  </header>
+
+  <main class="layout">
+
+    <!-- СТРИМ -->
+    <section class="panel" id="stream-panel">
+      <h2 class="panel__title">Последний стрим</h2>
+      <div id="stream-container" class="card-grid">
+        <p class="loading">Загрузка...</p>
+      </div>
+    </section>
+
+    <!-- КЛИПЫ -->
+    <section class="panel" id="clips-panel">
+      <h2 class="panel__title">Случайный клип</h2>
+      <div class="clips-controls">
+        <button id="random-clip-btn" class="pixel-btn">🎲 Другой клип</button>
+      </div>
+      <div id="clip-container" class="card-grid">
+        <p class="loading">Загрузка...</p>
+      </div>
+    </section>
+
+    <!-- ЭМОДЗИ -->
+    <section class="panel" id="emotes-panel">
+      <h2 class="panel__title">Популярные эмодзи</h2>
+      <div id="emotes-container" class="emotes-grid">
+        <p class="loading">Загрузка...</p>
+      </div>
+    </section>
+
+    <!-- TELEGRAM -->
+    <section class="panel" id="telegram-panel">
+      <h2 class="panel__title">Последние посты из Telegram</h2>
+      <div class="telegram-wrap">
+        <!-- Официальный виджет Telegram (замените NUMBER на ID последнего поста) -->
+        <script async src="https://telegram.org/js/telegram-widget.js?22"
+                data-telegram-post="O_smotri_eto_Sanya/NUMBER"
+                data-width="100%"
+                data-dark="1"></script>
+
+        <!-- Резервный вариант: веб-версия канала в iframe -->
+        <iframe class="telegram-fallback"
+                src="https://t.me/s/O_smotri_eto_Sanya"
+                loading="lazy"
+                title="Telegram канал O_smotri_eto_Sanya"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Сделано с для O_Smotri_Eto_Sanya · <a href="https://m.twitch.tv/o_smotri_eto_sanya" target="_blank" rel="noopener">Twitch</a> · <a href="https://t.me/O_smotri_eto_Sanya" target="_blank" rel="noopener">Telegram</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
